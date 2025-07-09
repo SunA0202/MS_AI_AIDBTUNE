@@ -1,0 +1,20 @@
+{
+  "name": "query-log-index",
+  "fields": [
+    {"name": "sql_id", "type": "Edm.String", "key": true, "filterable": true, "searchable": false},
+    {"name": "sql_text", "type": "Edm.String", "searchable": true, "analyzer": "en.lucene"},
+    {"name": "execution_count", "type": "Edm.Int32", "filterable": true, "sortable": true},
+    {"name": "avg_elapsed_time_ms", "type": "Edm.Double", "filterable": true, "sortable": true},
+    {"name": "max_elapsed_time_ms", "type": "Edm.Double", "filterable": true, "sortable": true},
+    {"name": "first_execution_time", "type": "Edm.DateTimeOffset", "filterable": true, "sortable": true},
+    {"name": "last_execution_time", "type": "Edm.DateTimeOffset", "filterable": true, "sortable": true},
+    {"name": "database_name", "type": "Edm.String", "filterable": true, "searchable": false}
+  ],
+  "suggesters": [
+    {
+      "name": "sqlTextSuggester",
+      "searchMode": "analyzingInfixMatching",
+      "sourceFields": ["sql_text"]
+    }
+  ]
+}

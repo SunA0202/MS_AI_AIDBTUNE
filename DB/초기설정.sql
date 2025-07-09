@@ -1,0 +1,8 @@
+-- 스키마 생성
+-- CREATE SCHEMA SA;
+-- CREATE SCHEMA BAT;
+
+
+-- 쿼리 이력 보관을 위한 설정
+ALTER DATABASE [YourDatabaseName]
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30));

@@ -1,0 +1,60 @@
+{
+  "name": "db-schema-index",
+  "fields": [
+    {
+      "name": "schema_name",
+      "type": "Edm.String",
+      "key": false,
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true
+    },
+    {
+      "name": "table_name",
+      "type": "Edm.String",
+      "key": true,
+      "searchable": true,
+      "filterable": true,
+      "sortable": true,
+      "facetable": true
+    },
+    {
+      "name": "columns",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "name",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "sortable": false,
+          "facetable": false
+        },
+        {
+          "name": "data_type",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "sortable": false,
+          "facetable": true
+        },
+        {
+          "name": "is_nullable",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "sortable": false,
+          "facetable": true
+        }
+      ]
+    }
+  ],
+  "suggesters": [
+    {
+      "name": "tableSuggester",
+      "searchMode": "analyzingInfixMatching",
+      "sourceFields": ["table_name", "schema_name"]
+    }
+  ]
+}
