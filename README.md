@@ -22,6 +22,10 @@
 - 최적화된 SQL 쿼리를 제시하여 성능 향상을 지원합니다.
 
 ---
+## 설계도
+![image](https://github.com/user-attachments/assets/e6f1b1fb-70a0-4b5d-b800-9ed7ba707968)
+
+---
 
 ## 기술 스택
 
