@@ -23,7 +23,8 @@
 
 ---
 ## 설계도
-![image](https://github.com/user-attachments/assets/e6f1b1fb-70a0-4b5d-b800-9ed7ba707968)
+![image](https://github.com/user-attachments/assets/f1aa4dd0-295c-4280-a876-39af76118784)
+
 
 ---
 
